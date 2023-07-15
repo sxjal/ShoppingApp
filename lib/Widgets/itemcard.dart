@@ -57,7 +57,7 @@ class Itemcard extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.max,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Center(
                   child: Image.asset(
@@ -79,6 +79,7 @@ class Itemcard extends StatelessWidget {
                       ),
                 ),
                 Row(
+                  mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -100,7 +101,8 @@ class Itemcard extends StatelessWidget {
                               ),
                         ),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
@@ -109,15 +111,22 @@ class Itemcard extends StatelessWidget {
                                   .textTheme
                                   .bodySmall!
                                   .copyWith(
-                                    color: Color.fromARGB(255, 43, 43, 43),
+                                    color:
+                                        const Color.fromARGB(255, 43, 43, 43),
                                     fontSize: 12,
                                     fontWeight: FontWeight.w500,
                                     fontFamily: "Inter",
                                   ),
                             ),
+                            const SizedBox(
+                              width: 5,
+                            ),
                             const Icon(
                               Icons.star,
                               color: Colors.amber,
+                            ),
+                            const SizedBox(
+                              width: 5,
                             ),
                             Text(
                               "(458)",
@@ -125,7 +134,8 @@ class Itemcard extends StatelessWidget {
                                   .textTheme
                                   .bodySmall!
                                   .copyWith(
-                                    color: Color.fromARGB(255, 43, 43, 43),
+                                    color:
+                                        const Color.fromARGB(255, 43, 43, 43),
                                     fontSize: 12,
                                     fontWeight: FontWeight.w500,
                                     fontFamily: "Inter",
@@ -141,8 +151,8 @@ class Itemcard extends StatelessWidget {
                     const Spacer(),
                     Center(
                       child: Container(
-                        height: 30,
-                        width: 30,
+                        height: 40,
+                        width: 40,
                         decoration: const BoxDecoration(
                           color: Color.fromARGB(255, 102, 163, 92),
                           borderRadius: BorderRadius.all(
@@ -151,6 +161,7 @@ class Itemcard extends StatelessWidget {
                         ),
                         child: Center(
                           child: IconButton(
+                            padding: EdgeInsets.zero,
                             onPressed: () {},
                             icon: const Icon(
                               Icons.add,
