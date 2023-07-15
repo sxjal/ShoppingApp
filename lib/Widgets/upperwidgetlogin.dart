@@ -10,19 +10,19 @@ class TopWidget extends StatelessWidget {
   @override
   Widget build(context) {
     return Container(
-      height: 200,
+      height: 220,
       width: double.infinity,
       child: Stack(
         children: [
           Container(
-            height: 200,
+            height: 220,
             width: double.infinity,
             decoration: BoxDecoration(
               color: const Color.fromARGB(255, 84, 82, 82).withOpacity(0.4),
             ),
           ),
           SizedBox(
-            height: 200,
+            height: 220,
             width: double.infinity,
             child: Image.asset(
               texturelogin,
@@ -47,7 +47,7 @@ class TopWidget extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 200,
+            height: 220,
             width: double.infinity,
             child: Image.asset(
               texturelogin,
