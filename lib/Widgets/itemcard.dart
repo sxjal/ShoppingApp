@@ -1,4 +1,8 @@
+import "dart:ui";
+
 import "package:flutter/material.dart";
+import "package:google_fonts/google_fonts.dart";
+import "package:shoppingapp/constants/images.dart";
 import "package:shoppingapp/model/datamodel.dart";
 
 class Itemcard extends StatelessWidget {
@@ -7,15 +11,6 @@ class Itemcard extends StatelessWidget {
   final Data item;
   @override
   Widget build(context) {
-    return Card(
-      child: Container(
-        height: 260,
-        width: 210,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(10),
-        ),
-      ),
-    );
+    return Card();
   }
 }
