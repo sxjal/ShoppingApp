@@ -43,10 +43,13 @@ class MiddleRow extends StatelessWidget {
                 const SizedBox(
                   width: 10,
                 ),
-                for (final item in items) Itemcard(item: item),
-                const SizedBox(
-                  width: 10,
-                ),
+                for (final item in items)
+                  Padding(
+                      padding: const EdgeInsets.only(
+                        left: 5,
+                        right: 5,
+                      ),
+                      child: Itemcard(item: item)),
               ],
             ),
           )
