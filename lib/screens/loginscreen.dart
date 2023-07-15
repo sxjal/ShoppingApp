@@ -10,7 +10,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(context) {
     final paddinghori = MediaQuery.of(context).size.width * 0.082;
     final paddingvert = MediaQuery.of(context).size.height * 0.15;
-    print(paddinghori);
+
     return Scaffold(
       body: Center(
         child: GestureDetector(
