@@ -68,6 +68,12 @@ flutter:
     - assets/images/Loginscreenbg.png
     - assets/images/Rectangle.png
     - assets/images/logo.png
+    - assets/images/overhead.png
+    - assets/images/cappuccino.png
+    - assets/images/latte.png
+    - assets/images/espresso.png
+    - assets/images/mocha.png
+  
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
