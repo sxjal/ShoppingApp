@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
-import "package:shoppingapp/Widgets/itemcard.dart";
+import 'package:shoppingapp/Widgets/middleitemcard.dart';
 import "package:shoppingapp/data/data.dart";
 
 class MiddleRow extends StatelessWidget {
