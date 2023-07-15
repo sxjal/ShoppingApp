@@ -9,7 +9,7 @@ class TopWidget extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return Container(
+    return SizedBox(
       height: 220,
       width: double.infinity,
       child: Stack(
