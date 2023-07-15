@@ -1,6 +1,8 @@
 import 'dart:ui';
 
+import 'package:drop_shadow/drop_shadow.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shoppingapp/constants/images.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -84,34 +86,56 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 20,
-                          vertical: 20,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Image(
-                              image: AssetImage(logo),
-                              height: 150,
-                            ),
-                            Text(
-                              "SWIFT",
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image(
+                            image: AssetImage(logo),
+                            height: 150,
+                          ),
+                          Text(
+                            "SWIFT",
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleLarge!
+                                .copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 36,
+                                  fontFamily: GoogleFonts.raleway().fontFamily,
+                                ),
+                          ),
+                          Text(
+                            "Café",
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleLarge!
+                                .copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 28,
+                                  fontFamily: GoogleFonts.raleway().fontFamily,
+                                ),
+                          ),
+                          DropShadow(
+                            child: Text(
+                              "\"Latte but never late\"",
                               style: Theme.of(context)
                                   .textTheme
                                   .titleLarge!
                                   .copyWith(
                                     color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 32,
-                                    fontFamily: "Raleway",
+                                    fontSize: 14,
+                                    fontFamily: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w200,
+                                    ).fontFamily,
                                   ),
                             ),
-                            //Text("sajal"),
-                          ],
-                        ),
+                          ),
+                          
+                          //Text("sajal"),
+                        ],
                       ),
                     ),
                   ),
