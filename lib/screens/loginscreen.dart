@@ -92,7 +92,10 @@ class LoginScreen extends StatelessWidget {
                         children: [
                           Image(
                             image: AssetImage(logo),
-                            height: 150,
+                            height: 100,
+                          ),
+                          const SizedBox(
+                            height: 10,
                           ),
                           Text(
                             "SWIFT",
@@ -118,22 +121,75 @@ class LoginScreen extends StatelessWidget {
                                   fontFamily: GoogleFonts.raleway().fontFamily,
                                 ),
                           ),
-                          DropShadow(
-                            child: Text(
-                              "\"Latte but never late\"",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleLarge!
-                                  .copyWith(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontFamily: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.w200,
-                                    ).fontFamily,
-                                  ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            width: 200,
+                            child: Center(
+                              child: Text(
+                                "\"Latte but never late\"",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleLarge!
+                                    .copyWith(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontFamily: GoogleFonts.poppins(
+                                        fontWeight: FontWeight.w200,
+                                      ).fontFamily,
+                                    ),
+                              ),
                             ),
                           ),
-                          
+
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 20, vertical: 10),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                fillColor: Colors.white,
+                                filled: false,
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                border: UnderlineInputBorder(),
+                                labelText: 'Username',
+                                labelStyle: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 20, vertical: 0),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                fillColor: Colors.white,
+                                filled: false,
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                border: UnderlineInputBorder(),
+                                labelText: 'Password',
+                                labelStyle: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                          ElevatedButton(onPressed: (){}, child: Text("Login"),style: ElevatedButton.styleFrom(
+                            primary: Colors.white,
+                            onPrimary: Colors.black,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(32.0),
+                            ),
+                          ),),
                           //Text("sajal"),
                         ],
                       ),
