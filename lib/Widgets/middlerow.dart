@@ -30,6 +30,9 @@ class MiddleRow extends StatelessWidget {
                   ),
             ),
           ),
+          const SizedBox(
+            height: 10,
+          ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -37,7 +40,13 @@ class MiddleRow extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
+                const SizedBox(
+                  width: 10,
+                ),
                 for (final item in items) Itemcard(item: item),
+                const SizedBox(
+                  width: 10,
+                ),
               ],
             ),
           )

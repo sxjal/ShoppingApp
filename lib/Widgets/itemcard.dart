@@ -7,6 +7,15 @@ class Itemcard extends StatelessWidget {
   final Data item;
   @override
   Widget build(context) {
-    return Card();
+    return Card(
+      child: Container(
+        height: 260,
+        width: 210,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10),
+        ),
+      ),
+    );
   }
 }
