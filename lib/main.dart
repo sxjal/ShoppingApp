@@ -6,9 +6,7 @@ void main() {
     const MaterialApp(
       title: 'Flutter Tutorial',
       home: Scaffold(
-        body: Scaffold(
-          body: LoginScreen(),
-        ),
+        body: LoginScreen(),
       ),
     ),
   );
