@@ -39,7 +39,7 @@ class LoginScreen extends StatelessWidget {
             ),
             Padding(
               padding:
-                  const EdgeInsets.symmetric(horizontal: 40.0, vertical: 70),
+                  const EdgeInsets.symmetric(horizontal: 30.0, vertical: 70),
               child: Container(
                 height: double.infinity,
                 width: double.infinity,
@@ -51,7 +51,7 @@ class LoginScreen extends StatelessWidget {
             ),
             Padding(
               padding:
-                  const EdgeInsets.symmetric(horizontal: 40.0, vertical: 70),
+                  const EdgeInsets.symmetric(horizontal: 30.0, vertical: 70),
               child: ClipRect(
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
@@ -83,11 +83,37 @@ class LoginScreen extends StatelessWidget {
                         end: Alignment.bottomRight,
                       ),
                     ),
-                    child: const Center(
-                        child: Text(
-                      "Body",
-                      style: TextStyle(fontSize: 30),
-                    )),
+                    child: Center(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 20,
+                          vertical: 20,
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Image(
+                              image: AssetImage(logo),
+                              height: 150,
+                            ),
+                            Text(
+                              "SWIFT",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleLarge!
+                                  .copyWith(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 32,
+                                    fontFamily: "Raleway",
+                                  ),
+                            ),
+                            //Text("sajal"),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
