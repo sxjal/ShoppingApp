@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
+import "package:shoppingapp/Widgets/itemcard.dart";
+import "package:shoppingapp/data/data.dart";
 
 class MiddleRow extends StatelessWidget {
   const MiddleRow({super.key});
@@ -29,11 +31,15 @@ class MiddleRow extends StatelessWidget {
             ),
           ),
           SingleChildScrollView(
-            scrollDirection : Axis.horizontal,
-            child: for(item in items)
-            {
-
-            }
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                for (final item in items) Itemcard(item: item),
+              ],
+            ),
           )
         ],
       ),
