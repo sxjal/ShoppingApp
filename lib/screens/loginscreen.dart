@@ -28,9 +28,9 @@ class LoginScreen extends StatelessWidget {
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color.fromARGB(134, 180, 107, 65),
-                    Color.fromARGB(87, 180, 107, 65),
-                    Color.fromARGB(79, 56, 87, 197),
+                    Color.fromARGB(74, 180, 107, 65),
+                    Color.fromARGB(64, 180, 107, 65),
+                    Color.fromARGB(38, 56, 87, 197),
                   ],
                   begin: Alignment.bottomCenter,
                   end: Alignment.topCenter,
@@ -60,13 +60,23 @@ class LoginScreen extends StatelessWidget {
                     height: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
-                      //   color: const Color.fromARGB(124, 238, 238, 238)
-                      //       .withOpacity(0.2),
-                      // ),
+                      border: Border.all(
+                        width: 1.0,
+                        color: const Color.fromARGB(228, 255, 255, 255)
+                            .withOpacity(0.2),
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color:
+                              Color.fromRGBO(73, 71, 71, 0.055).withOpacity(.2),
+                          blurRadius: 10,
+                          offset: Offset(0, -20), // Shadow position
+                        ),
+                      ],
                       gradient: const LinearGradient(
                         colors: [
                           Color.fromRGBO(225, 225, 225, 0.069),
-                          Color.fromRGBO(225, 225, 225, 0.176),
+                          Color.fromRGBO(225, 225, 225, 0.288),
                           Color.fromRGBO(225, 225, 225, 0.038),
                         ],
                         begin: Alignment.topLeft,
@@ -75,7 +85,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                     child: const Center(
                         child: Text(
-                      "Censored",
+                      "Body",
                       style: TextStyle(fontSize: 30),
                     )),
                   ),
