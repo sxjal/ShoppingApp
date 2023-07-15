@@ -22,7 +22,7 @@ class LoginScreen extends StatelessWidget {
               Container(
                 height: double.infinity,
                 width: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(loginbg),
                     fit: BoxFit.cover,
@@ -100,7 +100,7 @@ class LoginScreen extends StatelessWidget {
                             const SizedBox(
                               height: 25,
                             ),
-                            Image(
+                            const Image(
                               image: AssetImage(logo),
                               height: 100,
                             ),
