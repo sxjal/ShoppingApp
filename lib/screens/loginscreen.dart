@@ -1,6 +1,4 @@
 import 'dart:ui';
-
-import 'package:drop_shadow/drop_shadow.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shoppingapp/constants/images.dart';
@@ -10,6 +8,9 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(context) {
+    final paddinghori = MediaQuery.of(context).size.width * 0.082;
+    final paddingvert = MediaQuery.of(context).size.height * 0.15;
+    print(paddinghori);
     return Scaffold(
       body: Center(
         child: Stack(
@@ -52,8 +53,10 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 30.0, vertical: 70),
+              padding: EdgeInsets.symmetric(
+                horizontal: paddinghori,
+                vertical: paddingvert,
+              ),
               child: ClipRect(
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
@@ -69,10 +72,10 @@ class LoginScreen extends StatelessWidget {
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color:
-                              Color.fromRGBO(73, 71, 71, 0.055).withOpacity(.2),
+                          color: const Color.fromRGBO(73, 71, 71, 0.055)
+                              .withOpacity(.2),
                           blurRadius: 10,
-                          offset: Offset(0, -20), // Shadow position
+                          offset: const Offset(0, -20), // Shadow position
                         ),
                       ],
                       gradient: const LinearGradient(
@@ -90,6 +93,9 @@ class LoginScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
+                          const SizedBox(
+                            height: 25,
+                          ),
                           Image(
                             image: AssetImage(logo),
                             height: 100,
@@ -130,7 +136,7 @@ class LoginScreen extends StatelessWidget {
                                 BoxShadow(
                                   color: Color.fromARGB(102, 231, 231, 231),
                                   spreadRadius: 10,
-                                  blurRadius: 40,
+                                  blurRadius: 60,
                                 ),
                               ],
                             ),
@@ -141,15 +147,19 @@ class LoginScreen extends StatelessWidget {
                                   .labelMedium!
                                   .copyWith(
                                     color: Colors.white,
-                                    fontFamily:
-                                        GoogleFonts.poppins().fontFamily,
+                                    fontFamily: GoogleFonts.poppins(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w400,
+                                    ).fontFamily,
                                   ),
                             ),
                           ),
 
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 10),
+                            padding: EdgeInsets.symmetric(
+                              horizontal: paddinghori,
+                              vertical: paddingvert * .1,
+                            ),
                             child: TextFormField(
                               decoration: const InputDecoration(
                                 fillColor: Colors.white,
@@ -168,8 +178,10 @@ class LoginScreen extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 0),
+                            padding: EdgeInsets.symmetric(
+                              horizontal: paddinghori,
+                              vertical: 2,
+                            ),
                             child: TextFormField(
                               decoration: const InputDecoration(
                                 fillColor: Colors.white,
@@ -187,12 +199,12 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: paddingvert * .2,
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 50.0,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: paddinghori * 1.2,
                               vertical: 10,
                             ),
                             child: SizedBox(
@@ -243,8 +255,8 @@ class LoginScreen extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 50.0,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: paddinghori * 1.2,
                               vertical: 10,
                             ),
                             child: SizedBox(
@@ -281,17 +293,22 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                           ),
+                          SizedBox(
+                            height: paddingvert * .122,
+                          ),
                           TextButton(
                             onPressed: () {},
-                            child: Text("Privacy Policy",
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .labelMedium!
-                                    .copyWith(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                    )),
+                            child: Text(
+                              "Privacy Policy",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .labelMedium!
+                                  .copyWith(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14,
+                                  ),
+                            ),
                           ),
 
                           //Text("sajal"),
@@ -304,80 +321,6 @@ class LoginScreen extends StatelessWidget {
             ),
           ],
         ),
-        /*
-        Stack(
-          children: [
-            Container(
-              height: double.infinity,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(loginbg),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            Container(
-              height: double.infinity,
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Color.fromARGB(134, 180, 107, 65),
-                    Color.fromARGB(87, 180, 107, 65),
-                    Color.fromARGB(79, 56, 87, 197),
-                  ],
-                  begin: Alignment.bottomCenter,
-                  end: Alignment.topCenter,
-                ),
-              ),
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 40.0, vertical: 70),
-              child: Container(
-                width: double.infinity,
-                height: double.infinity,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20.0),
-                  ),
-                  gradient: LinearGradient(
-                    colors: [
-                      Color.fromRGBO(225, 225, 225, 0.253),
-                      Color.fromRGBO(225, 225, 225, 0.488),
-                      Color.fromRGBO(225, 225, 225, 0.253),
-                    ],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                ),
-                child: Container(
-                  height: double.infinity,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(texturelogin),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 20,
-                    ),
-                    child: Column(
-                      children: [
-                        Text("sajal"),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-        */
       ),
     );
   }
