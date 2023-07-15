@@ -12,13 +12,15 @@ class SecondScreen extends StatelessWidget {
       body: Stack(
         children: [
           Opacity(
-            opacity: 0.1,
+            opacity: 0.4,
             child: Container(
               height: double.infinity,
               width: double.infinity,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(loginbg),
+                  image: AssetImage(
+                    loginbg,
+                  ),
                   fit: BoxFit.cover,
                 ),
               ),
