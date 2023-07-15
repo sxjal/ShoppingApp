@@ -125,21 +125,25 @@ class LoginScreen extends StatelessWidget {
                             height: 10,
                           ),
                           Container(
-                            width: 200,
-                            child: Center(
-                              child: Text(
-                                "\"Latte but never late\"",
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .titleLarge!
-                                    .copyWith(
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                      fontFamily: GoogleFonts.poppins(
-                                        fontWeight: FontWeight.w200,
-                                      ).fontFamily,
-                                    ),
-                              ),
+                            decoration: const BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color.fromARGB(102, 231, 231, 231),
+                                  spreadRadius: 10,
+                                  blurRadius: 40,
+                                ),
+                              ],
+                            ),
+                            child: Text(
+                              "\"Latte but never late\"",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .labelMedium!
+                                  .copyWith(
+                                    color: Colors.white,
+                                    fontFamily:
+                                        GoogleFonts.poppins().fontFamily,
+                                  ),
                             ),
                           ),
 
@@ -247,23 +251,10 @@ class LoginScreen extends StatelessWidget {
                               width: double.infinity,
                               child: DecoratedBox(
                                 decoration: BoxDecoration(
-                                  gradient: const LinearGradient(
-                                    colors: [
-                                      Color.fromARGB(255, 77, 43, 26),
-                                      Color.fromARGB(255, 167, 116, 90),
-                                    ],
-                                    begin: Alignment.centerLeft,
-                                    end: Alignment.centerRight,
+                                  border: Border.all(
+                                    color: Colors.white,
                                   ),
                                   borderRadius: BorderRadius.circular(20.0),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withOpacity(0.2),
-                                      spreadRadius: 1,
-                                      blurRadius: 7,
-                                      offset: const Offset(0, 3),
-                                    ),
-                                  ],
                                 ),
                                 child: ElevatedButton(
                                   onPressed: () {},
@@ -276,7 +267,7 @@ class LoginScreen extends StatelessWidget {
                                     ),
                                   ),
                                   child: Text(
-                                    "Login",
+                                    "SignUp",
                                     style: Theme.of(context)
                                         .textTheme
                                         .labelMedium!
@@ -289,6 +280,18 @@ class LoginScreen extends StatelessWidget {
                                 ),
                               ),
                             ),
+                          ),
+                          TextButton(
+                            onPressed: () {},
+                            child: Text("Privacy Policy",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .labelMedium!
+                                    .copyWith(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 14,
+                                    )),
                           ),
 
                           //Text("sajal"),
