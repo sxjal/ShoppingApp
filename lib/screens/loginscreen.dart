@@ -76,7 +76,7 @@ class LoginScreen extends StatelessWidget {
                       gradient: const LinearGradient(
                         colors: [
                           Color.fromRGBO(225, 225, 225, 0.069),
-                          Color.fromRGBO(225, 225, 225, 0.288),
+                          Color.fromRGBO(225, 225, 225, 0.203),
                           Color.fromRGBO(225, 225, 225, 0.038),
                         ],
                         begin: Alignment.topLeft,
