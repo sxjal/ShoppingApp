@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shoppingapp/Widgets/middlerow.dart';
 import 'package:shoppingapp/Widgets/upperwidgetlogin.dart';
 import 'package:shoppingapp/constants/images.dart';
-import 'package:shoppingapp/data/data.dart';
 
 class SecondScreen extends StatelessWidget {
   const SecondScreen({super.key});
@@ -43,6 +43,7 @@ class SecondScreen extends StatelessWidget {
             child: const Column(
               children: [
                 TopWidget(),
+                MiddleRow(),
               ],
             ),
           ),
