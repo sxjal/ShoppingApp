@@ -3,7 +3,6 @@ import 'package:shoppingapp/Widgets/bottomrow.dart';
 import 'package:shoppingapp/Widgets/middlerow.dart';
 import 'package:shoppingapp/Widgets/upperwidgetlogin.dart';
 import 'package:shoppingapp/constants/images.dart';
-import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
 
 class SecondScreen extends StatelessWidget {
   const SecondScreen({super.key});
