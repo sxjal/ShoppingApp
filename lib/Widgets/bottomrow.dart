@@ -14,7 +14,11 @@ class BottomCards extends StatelessWidget {
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 42, 41, 41).withOpacity(0.6),
       ),
+<<<<<<< HEAD
       child: ListView(
+=======
+      child: Column(
+>>>>>>> main
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 18, 180, 8),
