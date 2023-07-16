@@ -11,19 +11,6 @@ class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: SafeArea(
-        child: Container(
-          padding: const EdgeInsets.all(
-            8,
-          ),
-          margin: const EdgeInsets.symmetric(
-            horizontal: 24,
-          ),
-          decoration: const BoxDecoration(
-            color: Colors.black38,
-          ),
-        ),
-      ),
       body: Stack(
         children: [
           Opacity(
