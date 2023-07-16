@@ -14,7 +14,7 @@ class BottomItemcard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var _height = 270.0;
-    var _width = 220.0;
+    var _width = 400.0;
     return Stack(
       children: [
         Opacity(
