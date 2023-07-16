@@ -13,7 +13,7 @@ class BottomItemcard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _height = 270.0;
+    var _height = 170.0;
     var _width = 400.0;
     return Stack(
       children: [
@@ -54,7 +54,7 @@ class BottomItemcard extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.all(20),
-            child: Column(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,

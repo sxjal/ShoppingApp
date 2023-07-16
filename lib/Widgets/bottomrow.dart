@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
-import "package:shoppingapp/Widgets/middleitemcard.dart";
+import "package:shoppingapp/Widgets/bottomitemcard.dart";
 import "package:shoppingapp/data/data.dart";
 
 class BottomCards extends StatelessWidget {
@@ -14,10 +14,7 @@ class BottomCards extends StatelessWidget {
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 42, 41, 41).withOpacity(0.6),
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
+      child: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 18, 180, 8),
@@ -34,8 +31,8 @@ class BottomCards extends StatelessWidget {
             height: 10,
           ),
           SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: ListView(
+            scrollDirection: Axis.vertical,
+            child: Column(
               children: [
                 const SizedBox(
                   width: 10,
@@ -45,8 +42,10 @@ class BottomCards extends StatelessWidget {
                     padding: const EdgeInsets.only(
                       left: 5,
                       right: 5,
+                      top: 5,
+                      bottom: 5,
                     ),
-                    child: Itemcard(
+                    child: BottomItemcard(
                       item: item,
                     ),
                   ),
