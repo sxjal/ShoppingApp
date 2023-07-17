@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
+import 'package:shoppingapp/Widgets/bottomrow.dart';
 import 'package:shoppingapp/Widgets/middlerow.dart';
 import 'package:shoppingapp/Widgets/upperwidgetlogin.dart';
 import 'package:shoppingapp/constants/images.dart';
@@ -46,7 +47,6 @@ class SecondScreen extends StatelessWidget {
                 const MiddleRow(),
                 Stack(
                   children: [
-                    const MiddleRow(),
                     Positioned(
                       bottom: 10,
                       child: Container(
@@ -60,6 +60,7 @@ class SecondScreen extends StatelessWidget {
                         width: double.infinity,
                       ),
                     ),
+                    BottomRow(),
                   ],
                 ),
               ],

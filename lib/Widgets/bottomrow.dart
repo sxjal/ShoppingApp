@@ -1,78 +1,65 @@
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
 import "package:shoppingapp/Widgets/bottomitemcard.dart";
-import "package:shoppingapp/constants/images.dart";
+import 'package:shoppingapp/Widgets/middleitemcard.dart';
 import "package:shoppingapp/data/data.dart";
 
-class BottomCards extends StatelessWidget {
-  const BottomCards({super.key});
+class BottomRow extends StatelessWidget {
+  const BottomRow({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          height: 360,
-          width: double.infinity,
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(105, 49, 24, 12),
-                Color.fromARGB(60, 167, 116, 90),
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
+    return Container(
+      height: 360,
+      width: double.infinity,
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Color.fromARGB(105, 49, 24, 12),
+            Color.fromARGB(60, 167, 116, 90),
+          ],
         ),
-        Container(
-          height: 360,
-          width: double.infinity,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(texturelogin),
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
-
-        // scrollDirection: Axis.vertical,
-        Container(
-          height: 360,
-          width: double.infinity,
-          child: SingleChildScrollView(
-            child: Column(
-              // mainAxisAlignment: MainAxisAlignment.center,
-              // crossAxisAlignment: CrossAxisAlignment.center,
-              // mainAxisSize: MainAxisSize.min,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 18, 180, 0),
-                  child: Text(
-                    "Get it Instantly",
-                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: const Color.fromARGB(255, 194, 194, 194),
-                          fontSize: 18,
-                          fontFamily: GoogleFonts.inter().fontFamily,
-                        ),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 18, 180, 8),
+            child: Text(
+              "Most Popular Bevarages",
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    color: const Color.fromARGB(255, 194, 194, 194),
+                    fontSize: 18,
+                    fontFamily: GoogleFonts.inter().fontFamily,
                   ),
-                ),
-                Container(
-                  //height: ,
-                  child: ListView(
-                    children: [
-                      for (var j = 0, i = 0; j < 25; j++, i < 5 ? i++ : i = 0)
-                        BottomItemcard(
-                          item: items[i],
-                        ),
-                    ],
-                  ),
-                ),
-              ],
             ),
           ),
-        ),
-      ],
+          const SizedBox(
+            height: 10,
+          ),
+          Expanded(
+            child: Container(
+              //height: 280,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    for (final item in items) BottomItemcard(item: item),
+                  ],
+                ),
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
