@@ -18,11 +18,11 @@ class BottomCards extends StatelessWidget {
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color.fromARGB(66, 77, 43, 26),
+                Color.fromARGB(105, 49, 24, 12),
                 Color.fromARGB(60, 167, 116, 90),
               ],
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
           ),
         ),
@@ -51,7 +51,7 @@ class BottomCards extends StatelessWidget {
                       ),
                 ),
               ),
-              const Bottom2(),
+              Bottom2(),
             ],
           ),
         ),
