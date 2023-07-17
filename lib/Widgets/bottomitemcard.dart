@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:shoppingapp/constants/images.dart';
 import 'package:shoppingapp/model/datamodel.dart';
+import 'package:shoppingapp/screens/itemscreen.dart';
 
 class BottomItemcard extends StatelessWidget {
   const BottomItemcard({super.key, required this.item});
@@ -203,7 +204,14 @@ class BottomItemcard extends StatelessWidget {
                               child: Center(
                                 child: TextButton(
                                   //padding: EdgeInsets.zero,
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            ItemScreen(item: item),
+                                      ),
+                                    );
+                                  },
                                   child: const Text(
                                     "Add",
                                     style: TextStyle(
