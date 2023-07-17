@@ -240,7 +240,8 @@ class LoginScreen extends StatelessWidget {
                                     onPressed: () {
                                       Navigator.of(context)
                                           .push(MaterialPageRoute(
-                                        builder: (context) => SecondScreen(),
+                                        builder: (context) =>
+                                            const SecondScreen(),
                                       ));
                                     },
                                     style: ElevatedButton.styleFrom(
