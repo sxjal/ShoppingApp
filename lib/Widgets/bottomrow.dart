@@ -52,7 +52,14 @@ class BottomRow extends StatelessWidget {
                     const SizedBox(
                       width: 10,
                     ),
-                    for (final item in items) BottomItemcard(item: item),
+                    for (final item in items)
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 10,
+                          vertical: 5,
+                        ),
+                        child: BottomItemcard(item: item),
+                      ),
                   ],
                 ),
               ),
