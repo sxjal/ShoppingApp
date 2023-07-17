@@ -1,6 +1,5 @@
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
-import "package:shoppingapp/Widgets/bottom2.dart";
 import "package:shoppingapp/Widgets/bottomitemcard.dart";
 import "package:shoppingapp/constants/images.dart";
 import "package:shoppingapp/data/data.dart";
