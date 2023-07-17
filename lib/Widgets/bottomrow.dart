@@ -15,15 +15,15 @@ class BottomRow extends StatelessWidget {
         Container(
           height: 360,
           width: double.infinity,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color.fromARGB(74, 180, 107, 65),
-                Color.fromARGB(64, 180, 107, 65),
-                Color.fromARGB(38, 56, 87, 197),
+                Color.fromARGB(130, 79, 55, 42).withOpacity(0.6),
+                Color.fromARGB(43, 197, 122, 78).withOpacity(0.5),
+                Color.fromARGB(38, 56, 87, 197).withOpacity(0.3),
               ],
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter,
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
           ),
         ),
