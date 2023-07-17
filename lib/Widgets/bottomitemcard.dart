@@ -13,6 +13,11 @@ class BottomItemcard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("item.item + 20");
+    return Container(
+      height: 20,
+      child: Text(
+        "${item.item} + 20",
+      ),
+    );
   }
 }

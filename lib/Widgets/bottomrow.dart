@@ -41,7 +41,7 @@ class BottomCards extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(20, 18, 180, 8),
+                padding: const EdgeInsets.fromLTRB(20, 18, 180, 0),
                 child: Text(
                   "Get it Instantly",
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
@@ -51,14 +51,22 @@ class BottomCards extends StatelessWidget {
                       ),
                 ),
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: Column(children: [
-                  for (final item in items)
-                    BottomItemcard(
-                      item: item,
-                    ),
-                ]),
+
+              // scrollDirection: Axis.vertical,
+              Expanded(
+                child: ListView(
+                  physics: const AlwaysScrollableScrollPhysics(),
+                  controller: ScrollController(),
+                  // mainAxisAlignment: MainAxisAlignment.center,
+                  // crossAxisAlignment: CrossAxisAlignment.center,
+                  // mainAxisSize: MainAxisSize.min,
+                  children: [
+                    for (var j = 0, i = 0; j < 25; j++, i < 5 ? i++ : i = 0)
+                      BottomItemcard(
+                        item: items[i],
+                      ),
+                  ],
+                ),
               ),
             ],
           ),
