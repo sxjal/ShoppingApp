@@ -35,40 +35,42 @@ class BottomCards extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(20, 18, 180, 0),
-                child: Text(
-                  "Get it Instantly",
-                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: const Color.fromARGB(255, 194, 194, 194),
-                        fontSize: 18,
-                        fontFamily: GoogleFonts.inter().fontFamily,
-                      ),
-                ),
-              ),
+        ),
 
-              // scrollDirection: Axis.vertical,
-              Expanded(
-                child: ListView(
-                  physics: const AlwaysScrollableScrollPhysics(),
-                  controller: ScrollController(),
-                  // mainAxisAlignment: MainAxisAlignment.center,
-                  // crossAxisAlignment: CrossAxisAlignment.center,
-                  // mainAxisSize: MainAxisSize.min,
-                  children: [
-                    for (var j = 0, i = 0; j < 25; j++, i < 5 ? i++ : i = 0)
-                      BottomItemcard(
-                        item: items[i],
-                      ),
-                  ],
+        // scrollDirection: Axis.vertical,
+        Container(
+          height: 360,
+          width: double.infinity,
+          child: SingleChildScrollView(
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.center,
+              // crossAxisAlignment: CrossAxisAlignment.center,
+              // mainAxisSize: MainAxisSize.min,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 18, 180, 0),
+                  child: Text(
+                    "Get it Instantly",
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                          color: const Color.fromARGB(255, 194, 194, 194),
+                          fontSize: 18,
+                          fontFamily: GoogleFonts.inter().fontFamily,
+                        ),
+                  ),
                 ),
-              ),
-            ],
+                Container(
+                  //height: ,
+                  child: ListView(
+                    children: [
+                      for (var j = 0, i = 0; j < 25; j++, i < 5 ? i++ : i = 0)
+                        BottomItemcard(
+                          item: items[i],
+                        ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ],

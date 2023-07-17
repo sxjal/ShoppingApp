@@ -47,7 +47,7 @@ class SecondScreen extends StatelessWidget {
                 const MiddleRow(),
                 Stack(
                   children: [
-                    const BottomCards(),
+                    const MiddleRow(),
                     Positioned(
                       bottom: 10,
                       child: Container(

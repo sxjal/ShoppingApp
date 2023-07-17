@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:shoppingapp/constants/images.dart';
+import 'package:shoppingapp/constants/size.dart';
 import 'package:shoppingapp/model/datamodel.dart';
 
 class BottomItemcard extends StatelessWidget {
@@ -13,6 +14,7 @@ class BottomItemcard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     SizeConfig().init(context);
     return Container(
       height: 20,
       child: Text(
