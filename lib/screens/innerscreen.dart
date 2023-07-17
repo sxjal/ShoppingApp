@@ -3,7 +3,6 @@ import 'package:shoppingapp/Widgets/bottomrow.dart';
 import 'package:shoppingapp/Widgets/middlerow.dart';
 import 'package:shoppingapp/Widgets/upperwidgetlogin.dart';
 import 'package:shoppingapp/constants/images.dart';
-import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
 
 class SecondScreen extends StatelessWidget {
   const SecondScreen({super.key});
@@ -42,11 +41,28 @@ class SecondScreen extends StatelessWidget {
                 end: Alignment.topCenter,
               ),
             ),
-            child: const Column(
+            child: Column(
               children: [
-                TopWidget(),
-                MiddleRow(),
-                BottomCards(),
+                const TopWidget(),
+                const MiddleRow(),
+                Stack(
+                  children: [
+                    const MiddleRow(),
+                    Positioned(
+                      bottom: 10,
+                      child: Container(
+                        padding: const EdgeInsets.all(20),
+                        margin: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(138, 134, 132, 132),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        height: 50,
+                        width: double.infinity,
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
