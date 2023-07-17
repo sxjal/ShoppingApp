@@ -41,11 +41,28 @@ class SecondScreen extends StatelessWidget {
                 end: Alignment.topCenter,
               ),
             ),
-            child: const Column(
+            child: Column(
               children: [
-                TopWidget(),
-                MiddleRow(),
-                BottomCards(),
+                const TopWidget(),
+                const MiddleRow(),
+                Stack(
+                  children: [
+                    const BottomCards(),
+                    Positioned(
+                      bottom: 10,
+                      child: Container(
+                        padding: const EdgeInsets.all(20),
+                        margin: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(138, 134, 132, 132),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        height: 50,
+                        width: double.infinity,
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
