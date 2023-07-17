@@ -7,3 +7,4 @@ const espresso = "assets/images/espresso.png";
 const cappuccino = "assets/images/cappuccino.png";
 const overhead = "assets/images/overhead.png";
 const wave = "assets/images/wave.png";
+const veg = "assets/images/veg.png";

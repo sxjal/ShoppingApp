@@ -22,8 +22,8 @@ class BottomItemcard extends StatelessWidget {
           child: GlassmorphicContainer(
             height: _height,
             width: _width,
-            borderRadius: 10,
-            blur: 15,
+            borderRadius: 20,
+            blur: 10,
             alignment: Alignment.center,
             border: 2,
             borderGradient: const LinearGradient(
@@ -46,59 +46,46 @@ class BottomItemcard extends StatelessWidget {
               color: Colors.white,
               width: 0.4,
             ),
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(20),
             image: const DecorationImage(
               image: AssetImage(texturelogin),
               fit: BoxFit.cover,
             ),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.only(
+              left: 20.0,
+              right: 10.0,
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Center(
-                  child: Image.asset(
-                    item.image,
-                    height: 150,
-                    width: 150,
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  item.item,
-                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: const Color.fromARGB(255, 239, 234, 234),
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                        fontFamily: "Inter",
-                      ),
-                ),
                 Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
                       children: [
-                        const SizedBox(
-                          height: 10,
-                        ),
                         Text(
-                          "Espresso, Steamed Milk",
+                          item.item,
                           style: Theme.of(context)
                               .textTheme
-                              .bodySmall!
+                              .bodyMedium!
                               .copyWith(
-                                color: const Color.fromARGB(255, 43, 43, 43),
-                                fontSize: 10,
-                                fontWeight: FontWeight.w400,
+                                color: const Color.fromARGB(255, 239, 234, 234),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w700,
                                 fontFamily: "Inter",
                               ),
+                        ),
+                        const SizedBox(
+                          height: 5,
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.min,
@@ -144,32 +131,92 @@ class BottomItemcard extends StatelessWidget {
                             const SizedBox(
                               width: 10,
                             ),
+                            Container(
+                              height: 30,
+                              width: 30,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage(veg),
+                                ),
+                              ),
+                            ),
                           ],
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Container(
+                          width: 220,
+                          child: Text(
+                            item.description,
+                            maxLines: 5,
+                            //softWrap: true,
+                            overflow: TextOverflow.ellipsis,
+                            style:
+                                Theme.of(context).textTheme.bodySmall!.copyWith(
+                                      color: Color.fromARGB(255, 253, 250, 250),
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w500,
+                                      fontFamily: "Inter",
+                                    ),
+                          ),
                         ),
                       ],
                     ),
                     const Spacer(),
-                    Center(
-                      child: Container(
-                        height: 40,
-                        width: 40,
-                        decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 102, 163, 92),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(5),
-                          ),
+                    Stack(
+                      children: [
+                        Container(
+                          height: 130,
+                          width: 130,
                         ),
-                        child: Center(
-                          child: IconButton(
-                            padding: EdgeInsets.zero,
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.add,
+                        Container(
+                          decoration: BoxDecoration(
+                            // color: Colors.white,
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                              image: AssetImage(
+                                item.image,
+                              ),
+                              fit: BoxFit.cover,
                             ),
-                            alignment: Alignment.center,
+                          ),
+                          height: 120,
+                          width: 130,
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Positioned(
+                          bottom: 0,
+                          left: 35,
+                          child: Center(
+                            child: Container(
+                              height: 30,
+                              width: 50,
+                              decoration: const BoxDecoration(
+                                color: Color.fromARGB(255, 102, 163, 92),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(5),
+                                ),
+                              ),
+                              child: Center(
+                                child: TextButton(
+                                  //padding: EdgeInsets.zero,
+                                  onPressed: () {},
+                                  child: const Text(
+                                    "Add",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
                           ),
                         ),
-                      ),
+                      ],
                     ),
                   ],
                 ),

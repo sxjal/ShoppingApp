@@ -102,7 +102,7 @@ class Itemcard extends StatelessWidget {
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
@@ -142,7 +142,7 @@ class Itemcard extends StatelessWidget {
                                   ),
                             ),
                             const SizedBox(
-                              width: 10,
+                              width: 20,
                             ),
                           ],
                         ),

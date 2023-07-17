@@ -1,7 +1,6 @@
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
 import "package:shoppingapp/Widgets/bottomitemcard.dart";
-import 'package:shoppingapp/Widgets/middleitemcard.dart';
 import "package:shoppingapp/data/data.dart";
 
 class BottomRow extends StatelessWidget {
@@ -28,11 +27,12 @@ class BottomRow extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 18, 180, 8),
             child: Text(
-              "Most Popular Bevarages",
+              "Get it Instantly",
               style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     color: const Color.fromARGB(255, 194, 194, 194),
                     fontSize: 18,
                     fontFamily: GoogleFonts.inter().fontFamily,
+                    fontWeight: FontWeight.w600,
                   ),
             ),
           ),
