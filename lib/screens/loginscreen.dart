@@ -2,7 +2,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shoppingapp/constants/images.dart';
-import 'package:shoppingapp/constants/size.dart';
 import 'package:shoppingapp/screens/innerscreen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -10,7 +9,9 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(context) {
-    SizeConfig().init(context);
+    final paddinghori = MediaQuery.of(context).size.width * 0.082;
+    final paddingvert = MediaQuery.of(context).size.height * 0.15;
+
     return Scaffold(
       body: Center(
         child: GestureDetector(
@@ -58,8 +59,8 @@ class LoginScreen extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(
-                  horizontal: SizeConfig().safeBlockHorizontal * 5,
-                  vertical: SizeConfig().safeBlockVertical * 5,
+                  horizontal: paddinghori,
+                  vertical: paddingvert,
                 ),
                 child: ClipRect(
                   child: BackdropFilter(
@@ -163,9 +164,8 @@ class LoginScreen extends StatelessWidget {
 
                             Padding(
                               padding: EdgeInsets.symmetric(
-                                horizontal:
-                                    SizeConfig().safeBlockHorizontal * 1.5,
-                                vertical: SizeConfig().safeBlockVertical * .1,
+                                horizontal: paddinghori,
+                                vertical: paddingvert * .1,
                               ),
                               child: TextFormField(
                                 decoration: const InputDecoration(
@@ -186,7 +186,7 @@ class LoginScreen extends StatelessWidget {
                             ),
                             Padding(
                               padding: EdgeInsets.symmetric(
-                                // horizontal: paddinghori,
+                                horizontal: paddinghori,
                                 vertical: 2,
                               ),
                               child: TextFormField(
@@ -207,11 +207,11 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                             SizedBox(
-                                //  height: paddingvert * .2,
-                                ),
+                              height: paddingvert * .2,
+                            ),
                             Padding(
                               padding: EdgeInsets.symmetric(
-                                //horizontal: paddinghori * 1.2,
+                                horizontal: paddinghori * 1.2,
                                 vertical: 10,
                               ),
                               child: SizedBox(
@@ -269,7 +269,7 @@ class LoginScreen extends StatelessWidget {
                             ),
                             Padding(
                               padding: EdgeInsets.symmetric(
-                                // horizontal: paddinghori * 1.2,
+                                horizontal: paddinghori * 1.2,
                                 vertical: 10,
                               ),
                               child: SizedBox(
@@ -308,8 +308,8 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                             SizedBox(
-                                // height: paddingvert * .122,
-                                ),
+                              height: paddingvert * .122,
+                            ),
                             TextButton(
                               onPressed: () {},
                               child: Text(
