@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:shoppingapp/constants/images.dart';
 import 'package:shoppingapp/model/datamodel.dart';
+import 'package:shoppingapp/screens/itemscreen.dart';
 
 class Itemcard extends StatelessWidget {
   const Itemcard({super.key, required this.item});
@@ -162,7 +163,13 @@ class Itemcard extends StatelessWidget {
                         child: Center(
                           child: IconButton(
                             padding: EdgeInsets.zero,
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => ItemScreen(item: item),
+                                ),
+                              );
+                            },
                             icon: const Icon(
                               Icons.add,
                             ),
