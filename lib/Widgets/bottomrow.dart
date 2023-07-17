@@ -1,7 +1,6 @@
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
 import "package:shoppingapp/Widgets/bottomitemcard.dart";
-import 'package:shoppingapp/Widgets/middleitemcard.dart';
 import "package:shoppingapp/constants/images.dart";
 import "package:shoppingapp/data/data.dart";
 
@@ -18,9 +17,9 @@ class BottomRow extends StatelessWidget {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color.fromARGB(130, 79, 55, 42).withOpacity(0.6),
-                Color.fromARGB(43, 197, 122, 78).withOpacity(0.5),
-                Color.fromARGB(38, 56, 87, 197).withOpacity(0.3),
+                const Color.fromARGB(130, 27, 26, 25).withOpacity(0.6),
+                const Color.fromARGB(43, 197, 122, 78).withOpacity(0.5),
+                const Color.fromARGB(38, 56, 87, 197).withOpacity(0.3),
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
