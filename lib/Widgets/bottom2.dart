@@ -7,15 +7,8 @@ class Bottom2 extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return Column(
-      children: [
-        const SizedBox(
-          height: 5,
-        ),
-        Text(items[0].item),
-        //for (final item in items) BottomItemcard(item: item),
-      ],
-      //   ),
+    return Container(
+      child: Text("sajal"),
     );
   }
 }

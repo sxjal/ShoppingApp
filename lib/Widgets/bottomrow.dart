@@ -51,7 +51,15 @@ class BottomCards extends StatelessWidget {
                       ),
                 ),
               ),
-              Bottom2(),
+              SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Column(children: [
+                  for (final item in items)
+                    BottomItemcard(
+                      item: item,
+                    ),
+                ]),
+              ),
             ],
           ),
         ),

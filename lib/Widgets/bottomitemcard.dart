@@ -13,6 +13,6 @@ class BottomItemcard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(item.item);
+    return Text("item.item + 20");
   }
 }
